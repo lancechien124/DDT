@@ -1,0 +1,24 @@
+2022-10-17 01:24:06,598 - root - INFO - ***** look for com.android.browser:id/url by id *****
+2022-10-17 01:31:42,472 - root - INFO - ***** look for com.android.browser:id/url by id *****
+2022-10-17 01:31:49,560 - root - INFO - ***** Click search box *****
+2022-10-17 01:31:49,612 - root - INFO - ***** Send text https://www.cathaybk.com.tw/cathaybk/ *****
+2022-10-17 01:31:51,654 - root - INFO - ***** Enter *****
+2022-10-17 01:32:11,714 - root - INFO - ***** Capture Screen *****
+2022-10-17 01:34:05,076 - root - INFO - ***** look for com.android.browser:id/url by id *****
+2022-10-17 01:34:12,022 - root - INFO - ***** Click search box *****
+2022-10-17 01:34:12,062 - root - INFO - ***** Send text https://www.cathaybk.com.tw/cathaybk/ *****
+2022-10-17 01:34:14,055 - root - INFO - ***** Enter *****
+2022-10-17 01:34:34,579 - root - INFO - ***** Capture Screen *****
+2022-10-17 02:00:58,139 - root - INFO - ***** look for com.android.browser:id/url by id *****
+2022-10-17 02:01:06,158 - root - INFO - ***** Click search box *****
+2022-10-17 02:01:07,261 - root - INFO - ***** Send text https://www.cathaybk.com.tw/cathaybk/ *****
+2022-10-17 02:01:07,914 - root - INFO - ***** Press Enter *****
+2022-10-17 02:01:28,484 - root - INFO - ***** look for //img[2] by xpath then click *****
+2022-10-17 02:01:31,484 - root - INFO - ***** look for //img[2] by xpath *****
+2022-10-17 02:03:40,611 - root - INFO - ***** look for com.android.browser:id/url by id *****
+2022-10-17 02:03:47,973 - root - INFO - ***** Click search box *****
+2022-10-17 02:03:48,046 - root - INFO - ***** Send text https://www.cathaybk.com.tw/cathaybk/ *****
+2022-10-17 02:03:49,836 - root - INFO - ***** Press Enter *****
+2022-10-17 02:04:10,372 - root - INFO - ***** look for //img[2] by xpath then click *****
+2022-10-17 02:04:18,372 - root - INFO - ***** look for //img[2] by xpath *****
+2022-10-17 13:41:52,865 - root - INFO - ***** look for com.android.browser:id/url by id *****
