@@ -122,11 +122,14 @@ class AppiumClient:
  
  
 if __name__ == "__main__":
+    
     function_btn= "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[1]" ##//img[2]' 
     product_btn = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.view.View" ## xpath=(.//*[normalize-space(text()) and normalize-space(.)='海外據點'])[1]/following::div[6]
     card = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.view.View[1]"
     card_link = '//android.view.View[@content-desc="卡片介紹"]/android.widget.TextView'
     card1 = "(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[10]"  ##xpath=(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[10]
+    ## xpath 
+    
     client = AppiumClient('Android', '7.1.2', '127.0.0.1:62001')
     client.launch_app(('com.android.browser', 'com.android.browser.BrowserActivity'))
     client.input('https://www.cathaybk.com.tw/cathaybk/','com.android.browser:id/url')
