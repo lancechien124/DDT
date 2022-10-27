@@ -55,29 +55,6 @@ class AppiumClient:
         element: MobileWebElement = self.driver.find_element(by, who)
         return element
 
-    def find_all_element(self, who: str, by: str):
-        logging.info('***** look for %s by %s *****' % (who, by))
-        time.sleep(3)
-        new = who + "*[not(*)]"
-        print (new)
-        elements = self.driver.find_element(by, new) ##"//*[not(*)]"
-        #element: MobileWebElement = self.driver.find_element(by, who)
-        return elements
-
-    def get_element_list(self):
-        element_list = []
-        logging.info('***** look for elements *****')
-        time.sleep(3)
-        who = "//android.view.View[@resource-id='lnk_Link']"
-        list = self.driver.find_elements(By.XPATH,who)
-        if list:
-            for value in list:
-                ele_name = value.get_attribute("content-desc")
-                element_list.append(ele_name)
-            return (element_list)
-        else:
-            return False
-
     def click(self, who: str, by=AppiumBy.ID):
         logging.info('***** look for %s by %s then click *****' % (who, by))
         time.sleep(8)
@@ -139,9 +116,6 @@ class AppiumClient:
         else:
             return None
  
-    def print_all_element(self):
-        logging.info(self.driver.page_source)
-
     def screenshot(self,name):
         logging.info('***** Capture Screen *****')
         self.driver.get_screenshot_as_file(os.getcwd() + '/'+ name +'.png')
@@ -153,14 +127,8 @@ if __name__ == "__main__":
     card = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.view.View[1]"
     card_link = '//android.view.View[@content-desc="卡片介紹"]/android.widget.TextView'
     card1 = "(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[10]"  ##xpath=(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[10]
-    '''function4 = "(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[10]"  ##xpath=(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[10]
-    function5 = "(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[9]"##xpath=(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[9]"
-    function6 = "(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[9]"  ##xpath=(.//*[normalize-space(text()) and normalize-space(.)='EN'])[1]/following::p[9]'''
     client = AppiumClient('Android', '7.1.2', '127.0.0.1:62001')
-    #client.launch_app(('com.android.chrome', 'com.google.android.apps.chrome.Main'))
     client.launch_app(('com.android.browser', 'com.android.browser.BrowserActivity'))
-    #client.click('com.android.chrome:id/terms_accept')
-    #client.input('https://www.cathaybk.com.tw/cathaybk/','com.android.chrome:id/search_box_text')
     client.input('https://www.cathaybk.com.tw/cathaybk/','com.android.browser:id/url')
     client.screenshot("homepage")
     client.click(function_btn,AppiumBy.XPATH)
@@ -168,13 +136,4 @@ if __name__ == "__main__":
     client.click(card,AppiumBy.XPATH)
     client.screenshot("card_list")
     print(client.get_element_list())
-    #print(client.get_attributes(card,AppiumBy.XPATH))
-    #client.click(card_link,AppiumBy.XPATH)
-    #client.click(card1,AppiumBy.XPATH)
-    #client.screenshot("card_1")
-    '''client.click(link)
-    client.click(function3,AppiumBy.XPATH)
-    client.click(function4,AppiumBy.XPATH)
-    client.click(function5,AppiumBy.XPATH)
-    client.click(function6,AppiumBy.XPATH)'''
     #client.screenshot()
