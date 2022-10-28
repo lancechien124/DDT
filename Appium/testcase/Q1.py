@@ -42,8 +42,7 @@ class AppiumClient:
                 self.caps['appPackage'] = package[0]
                 self.caps['appActivity'] = package[1]
             self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", self.caps)
-            self.driver.implicitly_wait(10)
-            time.sleep(9) 
+            self.driver.implicitly_wait(10) 
             return True
         except Exception as e:
             print(str(e))
@@ -139,4 +138,3 @@ if __name__ == "__main__":
     client.click(card,AppiumBy.XPATH)
     client.screenshot("card_list")
     print(client.get_element_list())
-    #client.screenshot()
